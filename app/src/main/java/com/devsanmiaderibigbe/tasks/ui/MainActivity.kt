@@ -2,18 +2,24 @@ package com.devsanmiaderibigbe.tasks.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.devsanmiaderibigbe.tasks.MyApplicatoin
 import com.devsanmiaderibigbe.tasks.R
+import com.devsanmiaderibigbe.tasks.di.component.AppComponent
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
+
+    lateinit var  appComponent: AppComponent
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
@@ -31,5 +37,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onSupportNavigateUp(): Boolean {// Up button will work on this method
         return navController.navigateUp()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+
+        super.onCreate(savedInstanceState, persistentState)
     }
 }

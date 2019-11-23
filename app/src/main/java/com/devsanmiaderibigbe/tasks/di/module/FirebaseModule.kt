@@ -1,6 +1,6 @@
 package com.devsanmiaderibigbe.tasks.di.module
 
-import com.devsanmiaderibigbe.tasks.di.ApplicationScope
+import com.devsanmiaderibigbe.tasks.di.scope.ApplicationScope
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import dagger.Module
@@ -20,4 +20,6 @@ class FirebaseModule {
     fun providesFirebaseDatabase() : FirebaseDatabase {
         return FirebaseDatabase.getInstance()
     }
+
+
 }
