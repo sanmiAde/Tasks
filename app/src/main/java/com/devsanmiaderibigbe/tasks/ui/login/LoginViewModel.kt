@@ -25,8 +25,6 @@ class LoginViewModel @Inject constructor(val firebaseRepositoryImp: FirebaseRepo
         }
     }
 
-
-
     val loginStatusLiveData: LiveData<Resource<Authentication>>
         get() {
             return _loginStatus
