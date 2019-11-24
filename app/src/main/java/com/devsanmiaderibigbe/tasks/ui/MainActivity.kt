@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
 
-    lateinit var  appComponent: AppComponent
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
@@ -39,8 +39,5 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp()
     }
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
 
-        super.onCreate(savedInstanceState, persistentState)
-    }
 }

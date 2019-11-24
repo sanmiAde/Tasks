@@ -1,6 +1,7 @@
 package com.devsanmiaderibigbe.tasks.ui.task
 
 
+import android.app.Application
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,6 +11,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.devsanmiaderibigbe.tasks.MyApplicatoin
 import com.devsanmiaderibigbe.tasks.R
 import com.devsanmiaderibigbe.tasks.ui.MainActivity
 import com.devsanmiaderibigbe.tasks.ui.common.Authentication
@@ -37,7 +39,7 @@ class HomeFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
 
-        (activity as MainActivity).appComponent.inject(this)
+        (context.applicationContext as MyApplicatoin).appComponent.inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
